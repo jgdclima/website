@@ -1,23 +1,23 @@
-import React, { ReactElement, ReactNode } from 'react'
-import { makeStyles, createStyles, Theme, Box } from '@material-ui/core'
+import React, { ReactElement, ReactNode, Children } from 'react'
+import { makeStyles, createStyles, Theme, Box, Grid } from '@material-ui/core'
 
 interface Props {
     children: ReactNode;
 }
 
-const useStyles = makeStyles((theme: Theme) => createStyles ({
+const useStyles = makeStyles((theme: Theme) => createStyles({
     root: {
         backgroundColor: theme.palette.background.paper,
-        height: '80vh'
+        height: '80vh',
     },
 }))
 
-export default function PageTemplate({}: Props): ReactElement {
+export default function PageTemplate({ children }: Props): ReactElement {
     const classes = useStyles();
 
     return (
-        <Box className={classes.root}>
-            
-        </Box>
+        <Grid container className={classes.root}>
+            {children}
+        </Grid>
     )
 }
