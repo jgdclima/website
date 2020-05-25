@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react'
+import PageTemplate from '../components/PageTemplate'
 
 interface Props {
 
@@ -6,9 +7,9 @@ interface Props {
 
 function Dev({ }: Props): ReactElement {
     return (
-        <div>
+        <PageTemplate>
 
-        </div>
+        </PageTemplate>
     )
 }
 
