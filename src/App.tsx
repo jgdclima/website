@@ -15,9 +15,12 @@ import Home from './pages/Home';
 import Footer from './components/Footer'
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './theme'
-import { Button } from '@material-ui/core';
+import { Button, Typography } from '@material-ui/core';
 import 'typeface-ibm-plex-sans';
 import 'typeface-montserrat';
+import Dev from './pages/Dev';
+import Creative from './pages/Creative';
+import Design from './pages/Design';
 
 function App() {
   return (
@@ -25,15 +28,18 @@ function App() {
       <div className="App">
         <Router >
           <Header>
-            <Button component={RouterLink} to="/">João Lima</Button>
-            <Button color="primary" component={RouterLink} to="/">Thanks</Button>
-            <Button color="primary" component={RouterLink} to="/">Blog</Button>
-            <Button color="primary" component={RouterLink} to="/">Resume</Button>
+            <Button component={RouterLink} to="/"> João Lima</Button>
+            <Button component={RouterLink} to="/thanks">Thanks</Button>
+            <Button component={RouterLink} to="/blog">Blog</Button>
+            <Button component={RouterLink} to="/">Resume</Button>
           </Header>
 
           <Route path='/' exact component={Home} />
           <Route path='/blog' component={Blog} />
           <Route path='/thanks' component={Thanks} />
+          <Route path='/dev' component={Dev} />
+          <Route path='/creative' component={Creative} />
+          <Route path='/design' component={Design} />
           <Footer />
         </Router>
       </div>
