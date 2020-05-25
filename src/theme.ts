@@ -15,7 +15,10 @@ let theme = createMuiTheme({
         },
         text: {
             primary: '#fff',
-            secondary: ''
+            secondary: '#000'
+        },
+        background: {
+            paper: '#eee'
         }
 
     },
@@ -30,8 +33,12 @@ let theme = createMuiTheme({
         body2: {
 
         },
-        button: {
+        h1: {
 
+        },
+        button: {
+            fontSize: '1.3rem',
+            textTransform: 'none'
         }
     }
 })
